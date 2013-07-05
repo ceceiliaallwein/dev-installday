@@ -30,17 +30,17 @@ print "EXERCISE 2.3"
 print "see script for value type"
 
 #assignments 
-width = 17 				#exp 1
-height = 12.0			#exp 2
-delimiter = '.'			#exp 3
-formula = 1+2*5			#exp 4
+width = 17 										#exp 1
+height = 12.0									#exp 2
+delimiter = '.'									#exp 3
+formula = 1+2*5									#exp 4
 
 #statements 
-print width/2			#int
-print width/2.0  		#float
-print height/3			#float
-print 1+2*5				#int / expression 
-print delimiter*5		#statement / str operation 
+print width/2									#int
+print width/2.0  								#float
+print height/3									#float
+print 1+2*5										#int / expression 
+print delimiter*5								#statement / str operation 
 
 
 #-------------------------------------------------------------
@@ -55,7 +55,7 @@ import math
 radius = 5
 
 #statements
-print ((radius**3)*math.pi*4)/3		#volume of a sphere 	
+print ((radius**3)*math.pi*4)/3					#volume of a sphere 	
 
 
 #-------------------------------------------------------------
@@ -66,11 +66,11 @@ print ""
 print "EXERCISE 2.4.2"
 
 #assignments 
-cov_price = 24.95					#full price 
-disc = .6							#40% discount
-ship_first = 3.0					#shipping for first book 
-ship_add = .75						#shipping for each add'l book 
-wh_price = cov_price*disc			#wholesale price after discount
+cov_price = 24.95								#full price 
+disc = .6										#40% discount
+ship_first = 3.0								#shipping for first book 
+ship_add = .75									#shipping for each add'l book 
+wh_price = cov_price*disc						#wholesale price after discount
 
 #statements 
 print ((wh_price+ship_first)+((wh_price+ship_add)*59))	#wholesale cost of 60 books
@@ -84,13 +84,13 @@ print ""
 print "EXERCISE 2.4.3"
 
 #assignments
-pace_easy = 8.25					#warmup pace
-pace_tempo = 7.2 					#training
-dist_easy = 2 						#two miles 
-dist_tempo = 3						#three miles
-time_st = 6*60+52					#time = six fifty two am 
-dur_easy = dist_easy*pace_easy		#duration of easy run	
-dur_tempo = dist_tempo*pace_tempo	#duration of tempo run
+pace_easy = 8.25								#warmup pace
+pace_tempo = 7.2 								#training
+dist_easy = 2 									#two miles 
+dist_tempo = 3									#three miles
+time_st = 6*60+52								#time = six fifty two am 
+dur_easy = dist_easy*pace_easy					#duration of easy run	
+dur_tempo = dist_tempo*pace_tempo				#duration of tempo run
 
 #statements 
 print (time_st+dur_easy+dur_tempo)/60
@@ -170,11 +170,11 @@ print "EXERCISE 3.4"
 
 
 #function
-def do_twice(f):			#defining function, function object as arguement 
-	f()						#calling function object 2x 
-	f()						#no arguement
+def do_twice(f):								#defining function, function object as arguement 
+	f()											#calling function object 2x 
+	f()											#no arguement
 
-def print_spam (): 			#defining first function, no arguement
+def print_spam (): 								#defining first function, no arguement
 	print 'spam' 			
 
 do_twice(print_spam)
@@ -182,25 +182,25 @@ print ""
 
 
 #function
-def do_twice(f, arg):			#exercise 3.4.2
+def do_twice(f, arg):							#exercise 3.4.2
 	f(arg)
 	f(arg)
 
-def print_twice(arg):			#exercise 3.4.3
+def print_twice(arg):							#exercise 3.4.3
 	print arg
 	print arg
 
-do_twice(print_twice, 'spam')	#exercise 3.4.4
+do_twice(print_twice, 'spam')					#exercise 3.4.4
 print ""
 
 
-#function
-def do_four(f, arg):			#exercise 3.5.5
+#functions
+def do_four(f, arg):							#exercise 3.5.5
 	do_twice(f, arg)
 	do_twice(f, arg)
 
 
-do_four(print_twice, 'spam')	#prints 8 spams (2*2*2 or do*print*do)
+do_four(print_twice, 'spam')					#prints 8 spams 
 print ""
 
 
@@ -213,20 +213,20 @@ print "EXERCISE 3.5"
 
 
 #assignments 
-j_block = '+'								#joint
-v_block = '|'								#vertical building block
-h_block = ' -'								#horizontal building block
-space_bm = ' '								#beginning or ending space	
-space_wh = ' '*12 							#white space between pillars 
-h_seg = (h_block + space_bm)*4 				#horizontal segment between joints 
-beam_h = ((j_block + h_seg)*2)+j_block		#complete horizontal layer
-beam_v = ((v_block + space_wh)*2)+v_block	#complete vertical layer 
-beam_h_lg = ((j_block + h_seg)*2)			#removes closing joint for incremental scaling
-beam_v_lg = ((v_block + space_wh)*2)		#removes closing pillar for incremental scaling 
+j_block = '+'									#joint
+v_block = '|'									#vertical building block
+h_block = ' -'									#horizontal building block
+space_bm = ' '									#beginning or ending space	
+space_wh = ' '*12 								#white space between pillars 
+h_seg = (h_block + space_bm)*4 					#horizontal segment between joints 
+beam_h = ((j_block + h_seg)*2)+j_block			#complete horizontal layer
+beam_v = ((v_block + space_wh)*2)+v_block		#complete vertical layer 
+beam_h_lg = ((j_block + h_seg)*2)				#removes closing joint for incremental scaling
+beam_v_lg = ((v_block + space_wh)*2)			#removes closing pillar for incremental scaling 
 
 #test
 print ""
-print "grid - alignment test"				#checks assignments for accuracy
+print "grid - alignment test"					#checks assignments for accuracy
 print beam_h								 
 print beam_v
 print ""
@@ -234,24 +234,24 @@ print ""
 
 #function header 
 print ""
-print "grid - 2x2"							#labels the return from the following function call 
+print "grid - 2x2"		
 
 #functions 
-def print_grid (arg1, arg2):				#orders the printing of segments 
+def print_grid (arg1, arg2):
 	print arg1
 	print_four(arg2)
 	print arg1
 	print_four(arg2)
 	print arg1
 
-def print_four(arg):						#automates the repeated task of multiple pillar segments 
+def print_four(arg):						 
 	print arg
 	print arg
 	print arg
 	print arg
 
-print_grid(beam_h, beam_v)				#calls the function sequence with the variables in assignments
-print ""										#tip: keep the args abstract until the actual call 
+print_grid(beam_h, beam_v)	
+print ""									
 
 
 #-------------------------------------------------------------
@@ -263,14 +263,14 @@ print ""
 print "grid - 4x4"
 
 #functions 
-def print_large (arg1, arg2, arg3, arg4):			#scales the grid vertically
+def print_large (arg1, arg2, arg3, arg4):		#scales the grid vertically
 	print_grid2 (arg1, arg2, arg3, arg4)
 	print_grid2 (arg1, arg2, arg3, arg4)
-	print arg1+arg1+arg3							#adds the bottom edge
+	print arg1+arg1+arg3						#adds the bottom edge
 
-def print_grid2 (arg1, arg2, arg3, arg4):			#unlike 3.5.1 this omits the bottom edge
-	print_one (arg1+arg1+arg3)						#this accommodates repeated functions w/o duplicating material
-	print_four(arg2+arg2+arg4)						#arithmetic adds additional elements 
+def print_grid2 (arg1, arg2, arg3, arg4):		#unlike 3.5.1 this omits the bottom edge
+	print_one (arg1+arg1+arg3)					#accommodates repeated functions w/o duplicating material
+	print_four(arg2+arg2+arg4)					#arithmetic adds additional elements 
 	print_one (arg1+arg1+arg3)
 	print_four(arg2+arg2+arg4)					
 

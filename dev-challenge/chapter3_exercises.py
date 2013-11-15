@@ -133,8 +133,8 @@ space_wh = ' '*12 								#white space between pillars
 h_seg = (h_block + space_bm)*4 					#horizontal segment between joints 
 beam_h = ((j_block + h_seg)*2)+j_block			#complete horizontal layer
 beam_v = ((v_block + space_wh)*2)+v_block		#complete vertical layer 
-beam_h_lg = ((j_block + h_seg)*2)				#removes closing joint for incremental scaling
-beam_v_lg = ((v_block + space_wh)*2)			#removes closing pillar for incremental scaling 
+beam_h_lg = ((j_block + h_seg)*2)				#no closing joint for scaling
+beam_v_lg = ((v_block + space_wh)*2)			#no closing pillar for scaling 
 
 #test - checks assignments for accuracy 
 print ""
@@ -165,6 +165,7 @@ def print_four(arg):
 #output
 print_grid(beam_h, beam_v)	
 print ""									
+
 
 
 #-------------------------------------------------------------
